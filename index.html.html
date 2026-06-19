@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hūs Rihtlǣfan</title>
+    <style>
+        /* Reset and base layout */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            background-color: #111; /* Fallback dark color */
+            
+            /* Background image setup */
+            background-image: url('element2.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            
+            /* Center all content */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            width: 100%;
+            position: relative;
+        }
+
+        /* Logo styling */
+        .logo {
+            width: 300px;
+            max-width: 80%;
+            margin-bottom: 2rem;
+            z-index: 10;
+        }
+
+        /* Center schematic styling with subtle animation */
+        .center-image {
+            width: 600px;
+            max-width: 90%;
+            z-index: 5;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.8); /* Adds depth against the background */
+            
+            /* The animation property */
+            animation: float 6s ease-in-out infinite;
+        }
+
+        /* Keyframes for the subtle floating effect */
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-12px); }
+            100% { transform: translateY(0px); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="logo.png" alt="Hūs Rihtlǣfan Logo" class="logo">
+        <img src="element1.jpg" alt="Core Schematic" class="center-image">
+    </div>
+</body>
+</html>
